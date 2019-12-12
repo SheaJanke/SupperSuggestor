@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body{
+  background-color: #33A1FD;
+}
+
+.header{
+    background-color: #2A9134;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px;
+    -webkit-text-stroke:1px #054A29;
+    text-align: left;
+    color:white;
+    padding: 20px 2vw;
+    margin: 1vw;
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: #054A29;
+  }
+
+.description{
+  display: inline-block;
+  background-color: rgb(42, 104, 145);
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin: auto;
+  padding: 2vh;
+  position: fixed;
+  left: 68vw;
+  top: 5vh;
+  outline: auto;
+  outline-color: white;
+}
