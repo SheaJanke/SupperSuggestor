@@ -28,7 +28,7 @@ body{
 
 .description{
   display: inline-block;
-  background-color: rgb(42, 104, 145);
+  background-color:#31393C;
   color:white;
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
@@ -44,15 +44,38 @@ body{
 
 .row{
   display: flex;
+  margin: 0 0;
+}
+.top-column{
+  flex: 50%;
+  margin: 1vw 1vw 0 1vw;
+  background-color: #2176FF;
+  font-family: 'Roboto', sans-serif;
+  outline-style: solid;
+  outline-width: 5px;
+  outline-color: white;
+
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    -webkit-text-stroke:1px #31393C;
+    color:white;
+    padding: 0.5vw;
+    text-align: center;
 }
 .search-column{
   flex: 50%;
-  padding: 2vw;
-  margin: 0 1vw;
-  background-color: white;
+  margin: 1vw 1vw 0 1vw;
+  background-color: #31393C;
+  font-family: 'Roboto', sans-serif;
+  outline-style: solid;
+  outline-width: 5px;
+  outline-color: white;
 }
-.column{
-  flex: 50%;
-  padding: 2vw;
-  background-color: bisque;
+.button{
+  color: white;
+  border-radius: 12px;
+  background-color: green;
 }
