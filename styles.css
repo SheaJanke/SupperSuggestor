@@ -68,6 +68,15 @@ body{
 .search-column{
   flex: 50%;
   margin: 1vw 1vw 0 1vw;
+  background-color: #2A9134;
+  font-family: 'Roboto', sans-serif;
+  outline-style: solid;
+  outline-width: 5px;
+  outline-color: white;
+}
+.results-column{
+  flex: 50%;
+  margin: 1vw 1vw 0 1vw;
   background-color: #31393C;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
@@ -77,5 +86,8 @@ body{
 .button{
   color: white;
   border-radius: 12px;
-  background-color: green;
+  background-color: #31393C;
+  font-size: 20px;
+  padding: 1vw;
+  margin: 1.5vw 0 0 8vw;
 }
