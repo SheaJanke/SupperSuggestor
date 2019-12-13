@@ -15,7 +15,7 @@ body{
 .header{
     background-color: #2A9134;
     font-family: 'Roboto', sans-serif;
-    font-size: 90px;
+    font-size: 7vw;
     -webkit-text-stroke:1px #054A29;
     text-align: left;
     color:white;
@@ -31,10 +31,10 @@ body{
   background-color:#31393C;
   color:white;
   font-family: 'Roboto', sans-serif;
-  font-size: 32px;
+  font-size: 2.5vw;
   text-align: center;
   margin: auto;
-  padding: 2vh;
+  padding: 1vw;
   position: fixed;
   left: 68vw;
   top: 5vh;
@@ -52,14 +52,14 @@ body{
   background-color: #2176FF;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
-  outline-width: 5px;
+  outline-width: 0.5vw;
   outline-color: white;
 
 }
 
 .title{
     font-family: 'Roboto', sans-serif;
-    font-size: 60px;
+    font-size: 5vw;
     -webkit-text-stroke:1px #31393C;
     color:white;
     padding: 0.5vw;
@@ -71,7 +71,7 @@ body{
   background-color: #2A9134;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
-  outline-width: 5px;
+  outline-width: 0.5vw;
   outline-color: white;
 }
 .results-column{
@@ -80,14 +80,33 @@ body{
   background-color: #31393C;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
-  outline-width: 5px;
+  outline-width: 0.5vw;
   outline-color: white;
 }
 .button{
   color: white;
   border-radius: 12px;
   background-color: #31393C;
-  font-size: 20px;
+  font-size: 2vw;
   padding: 1vw;
   margin: 1.5vw 0 0 8vw;
+}
+
+.select-button{
+  color: white;
+  width: 10vw;
+  padding: 0.5vw;
+  margin: 1vh 0 0 4vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
+  border-radius: 12px;
+  background-color: #054A29;
+}
+
+.filters{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  color: white;
+  padding: 1vw;
 }
