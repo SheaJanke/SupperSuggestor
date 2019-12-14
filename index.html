@@ -7,12 +7,15 @@
     </head>
 
     <body>
-        <div class="header">
-            <h1>Supper Suggestor &ensp;|</h1>
+        <div class="top">
+            <div class="header">
+                    <h1>Supper Suggestor &ensp;|</h1>
+                </div>
+                <div class="description">
+                    <h3>Easy and Customisible<br>Meal Recommendations</h3>
+            </div>
         </div>
-        <div class="description">
-            <h3>Easy and Customisible<br>Meal Recommendations</h3>
-        </div>
+        <div class="clearfix"></div>
         <div class = "row">
             <div class = "top-column">
                     <button type="button" class="button" onclick="alert('Hello world!')">ADD MEALS</button>
@@ -26,14 +29,15 @@
             <div class="search-column">
                 <script src="script.js"></script>    
                 <h3 class="filters">Time To Make</h3>
-                <input type="button" class="select-button" value="Short" id="short" onclick="onoff(id);">
-                <input type="button" class="select-button" value="Medium" id="medium" onclick="onoff(id);">
-                <input type="button" class="select-button" value="Long" id="long" onclick="onoff(id);">
+                <input type="button" class="time-button" value="Short" id="short" onclick="onoff(id);">
+                <input type="button" class="time-button" value="Medium" id="medium" onclick="onoff(id);">
+                <input type="button" class="time-button" value="Long" id="long" onclick="onoff(id);">
                 <h3 class="filters">Type Of Meat</h3>
-                <input type="button" class="select-button" value="Beef" id="beef" onclick="onoff(id);">
-                <input type="button" class="select-button" value="Chicken" id="chicken" onclick="onoff(id);">
-                <input type="button" class="select-button" value="Seafood" id="seafood" onclick="onoff(id);">
-                <input type="button" class="select-button" value="Pork" id="pork" onclick="onoff(id);">
+                <input type="button" class="meat-button" value="Beef" id="beef" onclick="onoff(id);">
+                <input type="button" class="meat-button" value="Chicken" id="chicken" onclick="onoff(id);">
+                <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="onoff(id);">
+                <input type="button" class="meat-button" value="Pork" id="pork" onclick="onoff(id);">
+                <input type="button" value="SEARCH" id="search">
             </div>
             <div class="results-column">
 

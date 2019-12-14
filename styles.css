@@ -12,36 +12,43 @@ body{
   background-color: #33A1FD;
 }
 
+.top{
+  background-color: #2A9134;
+  margin: 1vw;
+  outline-style: solid;
+  outline-width: 0.5vw;
+  outline-color: #054A29;
+  height: 20vh;
+  width: 98vw;
+
+}
 .header{
-    background-color: #2A9134;
     font-family: 'Roboto', sans-serif;
-    font-size: 7vw;
+    font-size: 6.5vw;
     -webkit-text-stroke:1px #054A29;
     text-align: left;
     color:white;
     padding: 20px 2vw;
-    margin: 1vw;
-    outline-style: solid;
-    outline-width: 5px;
-    outline-color: #054A29;
+    width: 60%;
+    float: left;
   }
 
 .description{
-  display: inline-block;
+  float: left;
   background-color:#31393C;
   color:white;
   font-family: 'Roboto', sans-serif;
   font-size: 2.5vw;
   text-align: center;
-  margin: auto;
+  margin: 2.5vh 0 0 1vw;
   padding: 1vw;
-  position: fixed;
-  left: 68vw;
-  top: 5vh;
   outline: auto;
   outline-color: white;
+  width: 30%;
 }
-
+.clearfix{
+  clear:both;
+}
 .row{
   display: flex;
   margin: 0 0;
@@ -89,16 +96,27 @@ body{
   background-color: #31393C;
   font-size: 2vw;
   padding: 1vw;
-  margin: 1.5vw 0 0 8vw;
+  margin: 1.5vw 0 0 6vw;
 }
 
-.select-button{
+.time-button{
   color: white;
   width: 10vw;
   padding: 0.5vw;
-  margin: 1vh 0 0 4vw;
+  margin: 1vh 0 3vh 4vw;
   font-family: 'Roboto', sans-serif;
   font-size: 2vw;
+  border-radius: 12px;
+  background-color: #054A29;
+}
+
+.meat-button{
+  color: white;
+  width: 9vw;
+  padding: 0.5vw;
+  margin: 1vh 0 1vw 2vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8vw;
   border-radius: 12px;
   background-color: #054A29;
 }
@@ -109,4 +127,14 @@ body{
   text-align: center;
   color: white;
   padding: 1vw;
+}
+
+#search{
+  color: white;
+  border-radius: 12px;
+  background-color: #31393C;
+  font-size: 2vw;
+  padding: 1vw;
+  margin: 1vw auto;
+  display: block;
 }
