@@ -1,5 +1,5 @@
 var meals = [['Wieswurst','short','pork'],
-['Spagetti','medium','beef'],
+['Spaghetti','medium','beef'],
 ['Pork Chops','short','pork'],
 ['Shake n Bake Chicken','medium','chicken'],
 ['Whole Chicken','long','chicken'],
@@ -60,4 +60,5 @@ function search(){
         }
     }
     document.getElementById('results').style.display = 'none';
+    document.getElementById('results-table').style.display = 'block';
 }
