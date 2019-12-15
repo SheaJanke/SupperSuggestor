@@ -18,7 +18,7 @@ body{
   outline-style: solid;
   outline-width: 0.5vw;
   outline-color: #054A29;
-  height: 20vh;
+  height: 10vw;
   width: 98vw;
 
 }
@@ -28,7 +28,7 @@ body{
     -webkit-text-stroke:1px #054A29;
     text-align: left;
     color:white;
-    padding: 20px 2vw;
+    padding: 1vw 2vw;
     width: 60%;
     float: left;
   }
@@ -40,7 +40,7 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: 2.5vw;
   text-align: center;
-  margin: 2.5vh 0 0 1vw;
+  margin: 1vw 0 0 1vw;
   padding: 1vw;
   outline: auto;
   outline-color: white;
@@ -143,4 +143,13 @@ body{
   color: white;
   font-size: 2vw;
   padding: 1vw;
+}
+
+#results-table{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5vw;
+  height: 40vh;
+  overflow-y: auto;
+  padding: 1vw 5vw;
 }

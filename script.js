@@ -59,4 +59,5 @@ function search(){
             document.getElementById("table").appendChild(node);
         }
     }
+    document.getElementById('results').style.display = 'none';
 }
