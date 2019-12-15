@@ -50,11 +50,13 @@ function onoff(id){
 }
 
 function search(){
-    var results = []
+    document.getElementById('table').innerHTML = '';
     for(var a = 0; a < meals.length; a++){
         if(searchCriteria.indexOf(meals[a][1]) != -1 && searchCriteria.indexOf(meals[a][2]) != -1){
-            results.push(meals[a][0])
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(meals[a][0]);
+            node.appendChild(textnode);
+            document.getElementById("table").appendChild(node);
         }
     }
-    document.getElementById('results').innerHTML = results;
 }
