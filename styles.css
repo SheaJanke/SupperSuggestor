@@ -138,3 +138,9 @@ body{
   margin: 3.5vh auto;
   display: block;
 }
+
+#results{
+  color: white;
+  font-size: 2vw;
+  padding: 1vw;
+}
