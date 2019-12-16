@@ -9,7 +9,7 @@
 }
 
 body{
-  background-color:#ff0000;
+  background-color:#ff4444;
 }
 
 .top{
@@ -35,7 +35,7 @@ body{
 
 .description{
   float: left;
-  background-color:	#ff7878;
+  background-color:	#ff7777;
   color:white;
   font-family: 'Roboto', sans-serif;
   font-size: 2.5vw;
@@ -56,7 +56,7 @@ body{
 .top-column{
   flex: 50%;
   margin: 1vw 1vw 0 1vw;
-  background-color:#378b29;
+  background-color:#ff7777;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
   outline-width: 0.5vw;
@@ -67,7 +67,7 @@ body{
 .title{
     font-family: 'Roboto', sans-serif;
     font-size: 5vw;
-    -webkit-text-stroke:0.01vw #ff7878;
+    -webkit-text-stroke:0.01vw #ff4444;
     color:white;
     padding: 0.5vw;
     text-align: center;
@@ -75,20 +75,20 @@ body{
 .search-column{
   flex: 50%;
   margin: 1vw 1vw 0 1vw;
-  background-color: #ff7878;
+  background-color: #378b29;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
   outline-width: 0.5vw;
-  outline-color: #054A29;
+  outline-color: white;
 }
 .results-column{
   flex: 50%;
   margin: 1vw 1vw 0 1vw;
-  background-color: #ff7878;
+  background-color: #378b29;
   font-family: 'Roboto', sans-serif;
   outline-style: solid;
   outline-width: 0.5vw;
-  outline-color: #054A29;
+  outline-color: white;
 }
 .time-button{
   color: white;
@@ -98,7 +98,8 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: 2vw;
   border-radius: 12px;
-  background-color: #054A29;
+  background-color: #ff4444;
+  border: 0.2vw solid white;
 }
 
 .meat-button{
@@ -109,7 +110,8 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: 1.8vw;
   border-radius: 12px;
-  background-color: #054A29;
+  background-color: #ff4444;
+  border: 0.2vw solid white;
 }
 
 .filters{
@@ -123,17 +125,19 @@ body{
 #search{
   color: white;
   border-radius: 12px;
-  background-color:#ff7878;
+  background-color:#ff7777;
   font-size: 2vw;
   padding: 1vw;
-  margin: 3.5vh auto;
+  margin: 1vw auto;
   display: block;
+  border: 0.2vw solid white;
 }
 
 #results{
   color: white;
-  font-size: 2vw;
-  padding: 1vw;
+  font-size: 3vw;
+  padding: 10vw;
+  text-align: center;
 }
 
 #results-table{

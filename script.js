@@ -25,7 +25,7 @@ var meals = [['Wieswurst','short','pork'],
 ['Roast Beef','long','beef'],
 ['Chicken Wraps','medium','chicken'],
 ['Butter Chicken Noodles','medium','chicken'],
-['Mummy Surprise','medium','chicken'],
+['Mommy Surprise','medium','chicken'],
 ['Meatloaf','long','beef'],
 ['Hamburgers','short','beef'],
 ['Ribs','medium','pork']]
@@ -41,10 +41,10 @@ function toggleCriteria(critera){
 }
 function onoff(id){
     currentvalue = document.getElementById(id).style.backgroundColor;
-    if(currentvalue == "rgb(5, 74, 41)" || currentvalue == ""){
-        document.getElementById(id).style.backgroundColor = "#33A1FD";
+    if(currentvalue == "rgb(255, 68, 68)" || currentvalue == ""){
+        document.getElementById(id).style.backgroundColor = "#74d680";
     }else{
-        document.getElementById(id).style.backgroundColor = "#054A29";
+        document.getElementById(id).style.backgroundColor = "#ff4444";
     }
     toggleCriteria(id);
 }
@@ -61,4 +61,7 @@ function search(){
     }
     document.getElementById('results').style.display = 'none';
     document.getElementById('results-table').style.display = 'block';
+    var array = [[1, 2, 3],[4,5]];
+    localStorage.setItem("array", JSON.stringify(array));
+    alert(JSON.parse(localStorage.getItem("array"))[1][1]);
 }
