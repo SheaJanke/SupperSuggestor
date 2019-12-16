@@ -18,7 +18,9 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="results-column">
-                <div id="results">Search to get results</div>
+                <ul id="meal-list">
+                    
+                </ul>
                 <div id="results-table">
                     <ol id="table">
                         
@@ -27,17 +29,18 @@
             </div>
             <div class="search-column">   
                 <h3 class="filters">Meal Name</h3>
-                <input type="text" id="name">
+                <input type="text" id="name" autocomplete="off">
                 <h3 class="filters">Time To Make</h3>
-                <input type="button" class="time-button" value="Short" id="short" onclick="onoff(id);">
-                <input type="button" class="time-button" value="Medium" id="medium" onclick="onoff(id);">
-                <input type="button" class="time-button" value="Long" id="long" onclick="onoff(id);">
+                <input type="button" class="time-button" value="Short" id="short" onclick="choose(id);">
+                <input type="button" class="time-button" value="Medium" id="medium" onclick="choose(id);">
+                <input type="button" class="time-button" value="Long" id="long" onclick="choose(id);">
                 <h3 class="filters">Type Of Meat</h3>
-                <input type="button" class="meat-button" value="Beef" id="beef" onclick="onoff(id);">
-                <input type="button" class="meat-button" value="Chicken" id="chicken" onclick="onoff(id);">
-                <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="onoff(id);">
-                <input type="button" class="meat-button" value="Pork" id="pork" onclick="onoff(id);">
-                <input type="button" value="SEARCH" id="search" onclick="search()">
+                <input type="button" class="meat-button" value="Beef" id="beef" onclick="choose(id);">
+                <input type="button" class="meat-button" value="Chicken" id="chicken" onclick="choose(id);">
+                <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="choose(id);">
+                <input type="button" class="meat-button" value="Pork" id="pork" onclick="choose(id);">
+                
+                <input type="button" value="ADD MEAL" id="search" onclick="add()">
             </div>
         </div>
         <script src="script.js"></script> 

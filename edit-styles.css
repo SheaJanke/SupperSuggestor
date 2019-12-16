@@ -73,7 +73,7 @@ body{
     text-align: center;
 }
 .search-column{
-  flex: 60%;
+  flex: 50%;
   margin: 1vw 1vw 0 1vw;
   background-color: #378b29;
   font-family: 'Roboto', sans-serif;
@@ -82,7 +82,7 @@ body{
   outline-color: white;
 }
 .results-column{
-  flex: 40%;
+  flex: 50%;
   margin: 1vw 1vw 0 1vw;
   background-color: #378b29;
   font-family: 'Roboto', sans-serif;
@@ -94,7 +94,7 @@ body{
   color: white;
   width: 10vw;
   padding: 0.5vw;
-  margin: 1vh 0 4vh 4vw;
+  margin: 0.5vw 0 2vw 4vw;
   font-family: 'Roboto', sans-serif;
   font-size: 2vw;
   border-radius: 12px;
@@ -106,7 +106,7 @@ body{
   color: white;
   width: 9vw;
   padding: 0.5vw;
-  margin: 1vh 0 1vw 2vw;
+  margin: 0.5vw 0 1vw 2vw;
   font-family: 'Roboto', sans-serif;
   font-size: 1.8vw;
   border-radius: 12px;
@@ -167,7 +167,7 @@ body{
     font-size: 2vw;
     text-align: center;
     display: block;
-    margin: 1vw auto;
+    margin: 0 auto;
     padding: 0.5vw;
     border: 0.1vw solid white;
 }
