@@ -29,7 +29,7 @@ body{
     text-align: left;
     color:white;
     padding: 1vw 2vw;
-    width: 60%;
+    width: 55%;
     float: left;
   }
 
@@ -44,7 +44,7 @@ body{
   padding: 1vw;
   outline: auto;
   outline-color: white;
-  width: 30%;
+  width: 35%;
 }
 .clearfix{
   clear:both;
@@ -73,7 +73,7 @@ body{
     text-align: center;
 }
 .search-column{
-  flex: 50%;
+  flex: 60%;
   margin: 1vw 1vw 0 1vw;
   background-color: #378b29;
   font-family: 'Roboto', sans-serif;
@@ -82,7 +82,7 @@ body{
   outline-color: white;
 }
 .results-column{
-  flex: 50%;
+  flex: 40%;
   margin: 1vw 1vw 0 1vw;
   background-color: #378b29;
   font-family: 'Roboto', sans-serif;
@@ -159,4 +159,15 @@ body{
   margin: 1vw auto;
   display: block;
   border: 0.2vw solid white;
+}
+
+#name{
+    background-color: #ff4444;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    display: block;
+    margin: 1vw auto;
+    padding: 0.5vw;
+    border: 0.1vw solid white;
 }

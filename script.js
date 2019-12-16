@@ -63,5 +63,9 @@ function search(){
     document.getElementById('results-table').style.display = 'block';
     var array = [[1, 2, 3],[4,5]];
     localStorage.setItem("array", JSON.stringify(array));
-    alert(JSON.parse(localStorage.getItem("array"))[1][1]);
+    JSON.parse(localStorage.getItem("array"))[1][1];
+}
+
+function direct(){
+    location.href = "edit-page.html";
 }

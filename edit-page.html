@@ -3,29 +3,31 @@
     <head>
         <title>Supper Suggestor</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="edit-styles.css">
     </head>
 
     <body>
         <div class="top">
             <div class="header">
-                    <h1>Supper Suggestor &ensp;|</h1>
-                </div>
-                <div class="description">
-                    <h3>Easy and Customisible<br>Meal Recommendations</h3>
+                <h1>Add/Edit Meals &ensp;|</h1>
+            </div>
+            <div class="description">
+                <h3>Change The Meals In The<br>Recommendation System</h3>
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class = "row">
-            <div class = "top-column">
-                <h2 class ="title">SEARCH</h2>  
-            </div>
-            <div class="top-column"> 
-                <h2 class ="title">RESULTS</h2>
-            </div>
-        </div>
         <div class="row">
+            <div class="results-column">
+                <div id="results">Search to get results</div>
+                <div id="results-table">
+                    <ol id="table">
+                        
+                    </ol>
+                </div>
+            </div>
             <div class="search-column">   
+                <h3 class="filters">Meal Name</h3>
+                <input type="text" id="name">
                 <h3 class="filters">Time To Make</h3>
                 <input type="button" class="time-button" value="Short" id="short" onclick="onoff(id);">
                 <input type="button" class="time-button" value="Medium" id="medium" onclick="onoff(id);">
@@ -36,14 +38,6 @@
                 <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="onoff(id);">
                 <input type="button" class="meat-button" value="Pork" id="pork" onclick="onoff(id);">
                 <input type="button" value="SEARCH" id="search" onclick="search()">
-            </div>
-            <div class="results-column">
-                <div id="results">Search to get results</div>
-                <div id="results-table">
-                    <ol id="table">
-                        
-                    </ol>
-                </div>
             </div>
         </div>
         <script src="script.js"></script> 
