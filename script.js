@@ -31,6 +31,7 @@ var meals = [['Wieswurst','short','pork'],
 ['Ribs','medium','pork']]
 
 var searchCriteria = []
+update_meals();
 
 
 
@@ -81,9 +82,22 @@ function choose(id){
         all_in_class[a].style.backgroundColor = "#ff4444";
     }
     document.getElementById(id).style.backgroundColor = "#74d680";
-    
 }
 
 function add(){
     
+}
+
+function update_meals(){
+    for(var a = 0; a < meals.length; a++){
+        var button = document.createElement("button");
+        button.className = "meal-button";
+        button.id = "meal" + a;
+        button.onclick = function(){choose(this.id);}
+        document.getElementById("meal-list").appendChild(button);
+        var meal = document.createElement("h3")
+        meal.className = "meals_on_list";
+        meal.innerHTML = meals[a][0];
+        document.getElementById('meal-list').appendChild(meal);
+    }
 }
