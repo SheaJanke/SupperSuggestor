@@ -20,7 +20,7 @@ var meals = [['Wieswurst','short','pork'],
 ['Stew','long','beef'],
 ['Stir Fry','medium','pork'],
 ['Fried Rice','medium','chicken'],
-['Lasagne','long','beef'],
+['Lasagna','long','beef'],
 ['Steak','medium','beef'],
 ['Roast Beef','long','beef'],
 ['Chicken Wraps','medium','chicken'],
@@ -28,7 +28,8 @@ var meals = [['Wieswurst','short','pork'],
 ['Mommy Surprise','medium','chicken'],
 ['Meatloaf','long','beef'],
 ['Hamburgers','short','beef'],
-['Ribs','medium','pork']]
+['Ribs','medium','pork'],
+['Ham','long','pork']]
 
 var searchCriteria = []
 update_meals();
@@ -84,6 +85,16 @@ function choose(id){
     document.getElementById(id).style.backgroundColor = "#74d680";
 }
 
+function fill(id){
+    meal = meals[parseInt(id.substring(4))];
+    document.getElementById('name').value = meal[0];
+    choose(meal[1]);
+    choose(meal[2]);
+    document.getElementById('add-button').style.display = 'none';
+    document.getElementById('save-button').style.display = 'block';
+    document.getElementById('delete-button').style.display = 'block';
+}
+
 function add(){
     
 }
@@ -93,7 +104,10 @@ function update_meals(){
         var button = document.createElement("button");
         button.className = "meal-button";
         button.id = "meal" + a;
-        button.onclick = function(){choose(this.id);}
+        button.onclick = function(){
+            choose(this.id);
+            fill(this.id);
+        }
         document.getElementById("meal-list").appendChild(button);
         var meal = document.createElement("h3")
         meal.className = "meals_on_list";

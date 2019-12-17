@@ -133,7 +133,7 @@ body{
   padding: 1vw;
 }
 
-#search{
+#add-button{
   color: white;
   border-radius: 12px;
   background-color:#ff7777;
@@ -142,6 +142,47 @@ body{
   margin: 1vw auto;
   display: block;
   border: 0.2vw solid white;
+}
+
+.change-button{
+  width: 15vw;
+  color: white;
+  border-radius: 12px;
+  background-color:#ff7777;
+  font-size: 2vw;
+  padding: 1vw;
+  margin: 1vw 0 1vw 6vw;
+  display: block;
+  border: 0.2vw solid white;
+  display: none;
+  float: left;
+}
+
+.box{
+  background-color:	#ff7777;
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  margin: 1vw;
+  outline: auto;
+  outline-color: white;
+  height: 4vw;
+  padding: 1vw;
+}
+#instructions{
+  float: left;
+  width: 65%;
+}
+
+#clear-button{
+  float: left;
+  width: 30%;
+  color: #378b29;
+  border-radius: 12px;
+  background-color:#74d680;
+  border: 0.2vw solid #378b29;
+  margin: 0 1vw 0 1vw;
 }
 
 #results{
