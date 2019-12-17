@@ -20,7 +20,7 @@
             <div class="results-column">
                 <div class="box">
                     <p id="instructions">Select meal to edit or</p>
-                    <input type="button" id="clear-button" value="add new" onclick="clear()">
+                    <input type="button" id="clear-button" value="add new" onclick='empty();'>
                 </div>
                 <div class="clearfix"></div>
                 <div id="meal-list"></div>
@@ -38,9 +38,9 @@
                 <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="choose(id);">
                 <input type="button" class="meat-button" value="Pork" id="pork" onclick="choose(id);">
                 
-                <input type="button" value="ADD MEAL" id="add-button" onclick="add()">
-                <input type="button" class="change-button" value="SAVE" id="save-button" onclick="save()">
-                <input type="button" class="change-button" value="DELETE" id="delete-button" onclick="del()">
+                <input type="button" value="ADD MEAL" id="add-button" onclick="add();">
+                <input type="button" class="change-button" value="SAVE" id="save-button" onclick="save();">
+                <input type="button" class="change-button" value="DELETE" id="delete-button" onclick="del();">
                 
             </div>
         </div>

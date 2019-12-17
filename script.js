@@ -31,6 +31,21 @@ var meals = [['Wieswurst','short','pork'],
 ['Ribs','medium','pork'],
 ['Ham','long','pork']]
 
+var addedMeals = localStorage.getItem('added');
+if(addedMeals.length > 0){
+    addedMeals = JSON.parse(addedMeals);
+}else{
+    addedMeals = [];
+}
+var deletedMeals = JSON.parse(localStorage.getItem('deleted'));
+if(addedMeals != null){
+    for(var a = 0; a < addedMeals.length; a++){
+        meals.push(addedMeals[a]);
+    }
+}
+
+
+
 var searchCriteria = []
 update_meals();
 
@@ -77,8 +92,8 @@ function direct(){
 }
 
 function choose(id){
-    currentclass = document.getElementById(id).className;
-    all_in_class = document.getElementsByClassName(currentclass);
+    var currentclass = document.getElementById(id).className;
+    var all_in_class = document.getElementsByClassName(currentclass);
     for(var a = 0; a < all_in_class.length; a++){
         all_in_class[a].style.backgroundColor = "#ff4444";
     }
@@ -95,8 +110,49 @@ function fill(id){
     document.getElementById('delete-button').style.display = 'block';
 }
 
+function empty(){
+    document.getElementById('name').value = '';
+    document.getElementById('short').style.backgroundColor = "#ff4444";
+    document.getElementById('medium').style.backgroundColor = "#ff4444";
+    document.getElementById('long').style.backgroundColor = "#ff4444";
+    document.getElementById('beef').style.backgroundColor = "#ff4444";
+    document.getElementById('pork').style.backgroundColor = "#ff4444";
+    document.getElementById('chicken').style.backgroundColor = "#ff4444";
+    document.getElementById('seafood').style.backgroundColor = "#ff4444";
+    document.getElementById('save-button').style.display = 'none';
+    document.getElementById('delete-button').style.display = 'none';
+    document.getElementById('add-button').style.display = 'block';
+    all_in_class = document.getElementsByClassName('meal-button');
+    for(var a = 0; a < all_in_class.length; a++){
+        all_in_class[a].style.backgroundColor = "#ff4444";
+    }
+
+}
+
 function add(){
-    
+    var name = document.getElementById('name').value;
+    var time;
+    var all_in_class = document.getElementsByClassName('time-button');
+    for(var a = 0; a < all_in_class.length; a++){
+        if(all_in_class[a].style.backgroundColor == 'rgb(116, 214, 128)'){
+            time = all_in_class[a].id;
+        }
+    }
+    var meat;
+    all_in_class = document.getElementsByClassName('meat-button');
+    for(var a = 0; a < all_in_class.length; a++){
+        if(all_in_class[a].style.backgroundColor == 'rgb(116, 214, 128)'){
+            meat = all_in_class[a].id;
+        }
+    }
+    var newMeal = [name,time,meat];
+    if(addedMeals != null){
+        addedMeals.push(newMeal);
+    }else{
+        [].push([name,time,meat]);
+    }
+    alert(addedMeals)
+    localStorage.setItem('added',JSON.stringify(addedMeals));
 }
 
 function update_meals(){
