@@ -31,24 +31,32 @@ var meals = [['Wieswurst','short','pork'],
 ['Ribs','medium','pork'],
 ['Ham','long','pork']]
 
+localStorage.clear();
 var addedMeals = localStorage.getItem('added');
-if(addedMeals.length > 0){
-    addedMeals = JSON.parse(addedMeals);
-}else{
-    addedMeals = [];
-}
-var deletedMeals = JSON.parse(localStorage.getItem('deleted'));
 if(addedMeals != null){
+    addedMeals = JSON.parse(addedMeals);
     for(var a = 0; a < addedMeals.length; a++){
         meals.push(addedMeals[a]);
     }
+}else{
+    addedMeals = [];
 }
-
-
+var deletedMeals = localStorage.getItem('deleted');
+if(deletedMeals != null){
+    deletedMeals = JSON.parse(deletedMeals);
+    for(var a = 0; a < deletedMeals.length; a++){
+        for(var b = 0; b < meals.length; b++){
+            if(JSON.stringify(meals[b]) == JSON.stringify(deletedMeals[a])){
+                meals.splice(b,1);
+            }
+        }
+    }
+}else{
+    deletedMeals = [];
+}
 
 var searchCriteria = []
 update_meals();
-
 
 
 function toggleCriteria(critera){
@@ -151,11 +159,100 @@ function add(){
     }else{
         [].push([name,time,meat]);
     }
-    alert(addedMeals)
     localStorage.setItem('added',JSON.stringify(addedMeals));
+    meals.push(newMeal);
+    update_meals();
+    empty();
+}
+
+function save(){
+    var meal_list = document.getElementsByClassName('meal-button');
+    for(var a = 0; a < meal_list.length; a++){
+        if(meal_list[a].style.backgroundColor == 'rgb(116, 214, 128)'){
+            index = addedMeals.indexOf(meals[a]);
+            if(index != -1){
+                addedMeals[index][0] = document.getElementById('name').value;
+                var all_in_class = document.getElementsByClassName('time-button');
+                for(var b = 0; b < all_in_class.length; b++){
+                    if(all_in_class[b].style.backgroundColor == 'rgb(116, 214, 128)'){
+                        addedMeals[index][1] = all_in_class[b].id;
+                    }
+                }
+                all_in_class = document.getElementsByClassName('meat-button');
+                for(var b = 0; b < all_in_class.length; b++){
+                    if(all_in_class[b].style.backgroundColor == 'rgb(116, 214, 128)'){
+                        addedMeals[index][2] = all_in_class[b].id;
+                    }
+                }
+                localStorage.setItem('added',JSON.stringify(addedMeals));
+                update_meals();
+                meal_list[a].style.backgroundColor = "#74d680";
+                return;
+            }else{
+                var name = document.getElementById('name').value;
+                var time;
+                var all_in_class = document.getElementsByClassName('time-button');
+                for(var b = 0; b < all_in_class.length; b++){
+                    if(all_in_class[b].style.backgroundColor == 'rgb(116, 214, 128)'){
+                        time = all_in_class[b].id;
+                    }
+                }
+                var meat;
+                all_in_class = document.getElementsByClassName('meat-button');
+                for(var b = 0; b < all_in_class.length; b++){
+                    if(all_in_class[b].style.backgroundColor == 'rgb(116, 214, 128)'){
+                        meat = all_in_class[b].id;
+                    }
+                }
+                var newMeal = [name,time,meat];
+                if(addedMeals != null){
+                    addedMeals.push(newMeal);
+                }else{
+                    [].push([name,time,meat]);
+                }
+                deletedMeals.push(meals[a]);
+                localStorage.setItem('deleted',JSON.stringify(deletedMeals));
+                meals.splice(a,1,newMeal);
+                localStorage.setItem('added',JSON.stringify(addedMeals));
+                update_meals();
+                meal_list[a].style.backgroundColor = "#74d680";
+            }
+        }
+    }
+}
+
+function del(){
+    var meal_list = document.getElementsByClassName('meal-button');
+    for(var a = 0; a < meal_list.length; a++){
+        if(meal_list[a].style.backgroundColor == 'rgb(116, 214, 128)'){
+            index = addedMeals.indexOf(meals[a]);
+            if(index != -1){
+                addedMeals.splice(index,1);
+                meals.splice(a,1);
+                localStorage.setItem('added',JSON.stringify(addedMeals));
+                update_meals();
+                empty();
+                return;
+            }else{
+                deletedMeals.push(meals[a]);
+                localStorage.setItem('deleted',JSON.stringify(deletedMeals));
+                meals.splice(a,1);
+                update_meals();
+                empty();
+            }
+        }
+    }
 }
 
 function update_meals(){
+    var elements = document.getElementsByClassName('meal-button');
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+    elements = document.getElementsByClassName('meals_on_list');
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
     for(var a = 0; a < meals.length; a++){
         var button = document.createElement("button");
         button.className = "meal-button";
