@@ -31,7 +31,6 @@ var meals = [['Wieswurst','short','pork'],
 ['Ribs','medium','pork'],
 ['Ham','long','pork']]
 
-localStorage.clear();
 var addedMeals = localStorage.getItem('added');
 if(addedMeals != null){
     addedMeals = JSON.parse(addedMeals);
