@@ -160,3 +160,11 @@ body{
   display: block;
   border: 0.2vw solid white;
 }
+
+#no-results{
+  color: white;
+  font-size: 3vw;
+  padding: 5vw 2vw;
+  text-align: center;
+  display: none;
+}
