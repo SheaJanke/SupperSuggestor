@@ -29,7 +29,8 @@ var meals = [['Wieswurst','short','pork'],
 ['Meatloaf','long','beef'],
 ['Hamburgers','short','beef'],
 ['Ribs','medium','pork'],
-['Ham','long','pork']]
+['Ham','long','pork'],
+['Chili','long','beef']]
 
 var addedMeals = localStorage.getItem('added');
 if(addedMeals != null){
