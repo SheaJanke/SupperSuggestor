@@ -9,39 +9,40 @@
     <body>
         <div class="top">
             <div class="header">
-                <h1>Add/Edit Meals &ensp;|</h1>
-            </div>
-            <div class="description">
-                <h3>Change The Meals In The<br>Recommendation System</h3>
+                <h1>Add/Edit Meals</h1>
             </div>
         </div>
         <div class="clearfix"></div>
         <div class="row">
-            <div class="results-column">
-                <div class="box">
-                    <p id="instructions">Select meal to edit or</p>
-                    <input type="button" id="clear-button" value="add new" onclick='empty();'>
+            <div class="panel">
+                <div class="results-column">
+                    <div class="box">
+                        <p id="instructions">Select meal to edit or</p>
+                        <input type="button" id="clear-button" value="add new" onclick='empty();'>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="meal-list"></div>
                 </div>
-                <div class="clearfix"></div>
-                <div id="meal-list"></div>
             </div>
-            <div class="search-column">   
-                <h3 class="filters">Meal Name</h3>
-                <input type="text" id="name" autocomplete="off">
-                <h3 class="filters">Time To Make</h3>
-                <input type="button" class="time-button" value="Short" id="short" onclick="choose(id);">
-                <input type="button" class="time-button" value="Medium" id="medium" onclick="choose(id);">
-                <input type="button" class="time-button" value="Long" id="long" onclick="choose(id);">
-                <h3 class="filters">Type Of Meat</h3>
-                <input type="button" class="meat-button" value="Beef" id="beef" onclick="choose(id);">
-                <input type="button" class="meat-button" value="Chicken" id="chicken" onclick="choose(id);">
-                <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="choose(id);">
-                <input type="button" class="meat-button" value="Pork" id="pork" onclick="choose(id);">
-                
-                <input type="button" value="ADD MEAL" id="add-button" onclick="add();">
-                <input type="button" class="change-button" value="SAVE" id="save-button" onclick="save();">
-                <input type="button" class="change-button" value="DELETE" id="delete-button" onclick="del();">
-                
+            <div class="panel">
+                <div class="search-column">   
+                    <h3 class="filters">Meal Name</h3>
+                    <input type="text" id="name" autocomplete="off">
+                    <h3 class="filters">Time To Make</h3>
+                    <input type="button" class="time-button" value="Short" id="short" onclick="choose(id);">
+                    <input type="button" class="time-button" value="Medium" id="medium" onclick="choose(id);">
+                    <input type="button" class="time-button" value="Long" id="long" onclick="choose(id);">
+                    <h3 class="filters">Type Of Meat</h3>
+                    <input type="button" class="meat-button" value="Beef" id="beef" onclick="choose(id);">
+                    <input type="button" class="meat-button" value="Chicken" id="chicken" onclick="choose(id);">
+                    <input type="button" class="meat-button" value="Seafood" id="seafood" onclick="choose(id);">
+                    <input type="button" class="meat-button" value="Pork" id="pork" onclick="choose(id);">
+                    
+                    <input type="button" value="ADD MEAL" id="add-button" onclick="add();">
+                    <input type="button" class="change-button" value="SAVE" id="save-button" onclick="save();">
+                    <input type="button" class="change-button" value="DELETE" id="delete-button" onclick="del();">
+                    
+                </div>
             </div>
         </div>
         <script src="edit-script.js"></script> 
